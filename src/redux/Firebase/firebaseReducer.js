@@ -12,14 +12,14 @@ const handlers = {
   SHOW_LOADER: (state) => ({ ...state, loading: true }),
   LOAD_ALL_NOTES: (state, { payload }) => ({
     ...state,
-    notes: [...payload],
+    notes: [...state.notes, ...payload],
     loading: false,
   }),
   DEFAULT: (state) => state,
 };
 
 const initialState = {
-  notes: [],
+  notes: [{ id: 1, title: "fakeTodo", date: new Date().toString() }],
   loading: false,
 };
 

@@ -16,16 +16,16 @@ export const showAlert = (text, shortMessage, type) => ({
   type: SHOW_ALERT,
   payload: { text, shortMessage, type },
 });
-//
+
 export const loadNotes = () => {
   return async (dispacth) => {
     dispacth({ type: SHOW_LOADER });
-    const response = await Axios.get(`${url}/notes.json`);
-    const payload = Object.keys(response.data).map((key) => ({
-      id: key,
-      ...response.data[key],
-    }));
-    dispacth({ type: LOAD_ALL_NOTES, payload });
+    // const response = await Axios.get(`${url}/notes.json`);
+    // const payload = Object.keys(response.data).map((key) => ({
+    //   id: key,
+    //   ...response.data[key],
+    // }));
+    dispacth({ type: LOAD_ALL_NOTES, payload: [] });
   };
 };
 
@@ -40,7 +40,7 @@ export const add = (title) => {
 
 export const remove = (id) => {
   return async (dispacth) => {
-    await Axios.delete(`${url}/notes/${id}.json`);
+    // await Axios.delete(`${url}/notes/${id}.json`);
     dispacth({ type: REMOVE_NOTE, payload: id });
   };
 };

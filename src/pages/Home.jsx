@@ -10,6 +10,7 @@ const Home = ({ notes, loading, loadAllNotes, removeNote }) => {
   useEffect(() => {
     loadAllNotes();
   }, []);
+
   return (
     <main>
       <Alert />
