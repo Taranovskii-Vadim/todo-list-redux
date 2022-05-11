@@ -6,9 +6,9 @@ import {
   ADD_NOTE,
   REMOVE_NOTE,
 } from "./types";
-import Axios from "axios";
+// import Axios from "axios";
 
-const url = "https://react-notes-3a1bc.firebaseio.com";
+// const url = "https://react-notes-3a1bc.firebaseio.com";
 
 export const hideAlert = () => ({ type: HIDE_ALERT });
 
@@ -32,8 +32,9 @@ export const loadNotes = () => {
 export const add = (title) => {
   return async (dispacth) => {
     const data = { title, date: new Date().toLocaleDateString() };
-    const response = await Axios.post(`${url}/notes.json`, data);
-    const payload = { id: response.data.name, ...data };
+    // const response = await Axios.post(`${url}/notes.json`, data);
+    // const payload = { id: response.data.name, ...data };
+    const payload = { id: Date.now().toString(), ...data };
     dispacth({ type: ADD_NOTE, payload });
   };
 };
