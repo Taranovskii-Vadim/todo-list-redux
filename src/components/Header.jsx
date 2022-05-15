@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => (
-  <header className="">
+  <header>
     <nav className="navbar navbar-dark navbar-expand-lg bg-primary">
       <div className="navbar-brand">NoteApp</div>
       <ul className="navbar-nav">
