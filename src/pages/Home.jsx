@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { loadNotes, remove } from "../redux/actionsCreators";
+import { remove, loadNotes } from "../redux/Firebase/creators";
 
 import Form from "../components/Form";
 import Alert from "../components/Alert";

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import { showAlert, add } from "../redux/actionsCreators";
+import { showAlert } from "../redux/Alert/creators";
+import { add } from "../redux/Firebase/creators";
 
 const Form = ({ showAlert, addNote }) => {
   const [inpVal, setInpVal] = useState(() => "");

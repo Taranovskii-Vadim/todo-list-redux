@@ -1,21 +1,8 @@
 import axios from "axios";
 
-import { HIDE_ALERT, SHOW_ALERT } from "./Alert/actionTypes";
-import {
-  ADD_NOTE,
-  REMOVE_NOTE,
-  LOAD_ALL_NOTES,
-  SHOW_LOADER,
-} from "./Firebase/actionTypes";
+import { ADD_NOTE, REMOVE_NOTE, LOAD_ALL_NOTES, SHOW_LOADER } from "./types";
 
 const url = "https://react-notes-3a1bc.firebaseio.com";
-
-export const hideAlert = () => ({ type: HIDE_ALERT });
-
-export const showAlert = (text, shortMessage, type) => ({
-  type: SHOW_ALERT,
-  payload: { text, shortMessage, type },
-});
 
 export const loadNotes = () => {
   return async (dispacth) => {

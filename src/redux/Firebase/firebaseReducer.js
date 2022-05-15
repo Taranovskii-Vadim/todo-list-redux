@@ -1,9 +1,4 @@
-import {
-  ADD_NOTE,
-  REMOVE_NOTE,
-  LOAD_ALL_NOTES,
-  SHOW_LOADER,
-} from "./actionTypes";
+import { ADD_NOTE, REMOVE_NOTE, LOAD_ALL_NOTES, SHOW_LOADER } from "./types";
 
 const handlers = {
   [REMOVE_NOTE]: (state, { payload }) => ({

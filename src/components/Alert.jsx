@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { hideAlert } from "../redux/actionsCreators";
+import { hideAlert } from "../redux/Alert/creators";
 
 const Alert = ({ alert, hide }) => {
   if (!alert.visible) return null;
