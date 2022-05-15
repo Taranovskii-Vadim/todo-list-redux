@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import { hideAlert } from "../redux/actionsCreators";
 
-const Alert = ({alert,hide}) => {
-  if(!alert.visible) return null;
+const Alert = ({ alert, hide }) => {
+  if (!alert.visible) return null;
+
   return (
     <div className={`alert alert-${alert.type} alert-dismissible`}>
       <strong>{alert.shortMessage}!</strong>
@@ -18,9 +20,10 @@ const Alert = ({alert,hide}) => {
   );
 };
 
-const mapStateToProps=state=>({alert:state.alert});
-const mapDispatchToProps=dispatch=>({
-  hide:()=>dispatch(hideAlert())
-})
+const mapStateToProps = ({ alert }) => ({ alert });
 
-export default connect(mapStateToProps,mapDispatchToProps)(Alert);
+const mapDispatchToProps = (dispatch) => ({
+  hide: () => dispatch(hideAlert()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Alert);
