@@ -1,14 +1,14 @@
+import axios from "axios";
+
+import { HIDE_ALERT, SHOW_ALERT } from "./Alert/actionTypes";
 import {
-  HIDE_ALERT,
-  SHOW_ALERT,
-  LOAD_ALL_NOTES,
-  SHOW_LOADER,
   ADD_NOTE,
   REMOVE_NOTE,
-} from "./types";
-// import Axios from "axios";
+  LOAD_ALL_NOTES,
+  SHOW_LOADER,
+} from "./Firebase/actionTypes";
 
-// const url = "https://react-notes-3a1bc.firebaseio.com";
+const url = "https://react-notes-3a1bc.firebaseio.com";
 
 export const hideAlert = () => ({ type: HIDE_ALERT });
 
